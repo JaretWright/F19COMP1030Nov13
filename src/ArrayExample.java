@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayExample {
@@ -15,7 +16,7 @@ public class ArrayExample {
         //a name
         Scanner keyboard = new Scanner(System.in);
         int[]   grades   = new int[4];
-        int[]   grades2  = {89,78,82,94};
+        int[]   grades2  = {89,78,82,94,100,54,34,55};
 
         grades[0]=89;
         grades[1]=78;
@@ -40,6 +41,25 @@ public class ArrayExample {
         System.out.println("\nAfter adding 5");
         for (int i=0; i<grades.length;i++)
             System.out.printf("index %d has value: %d%n",i,grades[i]);
+
+
+        System.out.println("\nComparing the average of the 2 arrays:");
+        System.out.printf("Grades array average = %.1f%% %n", getAvg(grades));
+        System.out.printf("Grades2 array average = %.1f%% %n", getAvg(grades2));
+
+        System.out.printf("The smallest number in grades array is %d%n",min(grades));
+
+    }
+
+    public static int min(int[] array)
+    {
+        int min=array[0];
+        for (int i=1;i<array.length;i++)
+        {
+            if (array[i]<min)
+                min=array[i];
+        }
+        return min;
     }
 
     /**
