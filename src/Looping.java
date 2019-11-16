@@ -9,4 +9,15 @@ public class Looping {
         for(int i=1; i<randomNum ; i++)
             System.out.println("My name is Jaret");
     }
+
+
+    /**
+     * This is an example of adding a method
+     */
+    public static void exampleMethod()
+    {
+        System.out.println("Hello World");
+    }
+
+
 }
